@@ -4,10 +4,10 @@ import { Rocket, ExternalLink } from "lucide-react";
 
 const RegisterSection = () => {
   return (
-    <section id="register" className="py-32 relative overflow-hidden">
+    <section id="register" className="py-20 md:py-32 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/20 via-accent/10 to-transparent rounded-full blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-radial from-primary/20 via-accent/10 to-transparent rounded-full blur-[60px] md:blur-[100px]" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -27,12 +27,12 @@ const RegisterSection = () => {
           <span className="text-sm font-medium">Registration Open</span>
         </motion.div>
 
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 md:mb-6 px-2">
           <span className="text-foreground">Ready to </span>
           <span className="gradient-text">Code Beyond Limits?</span>
         </h2>
 
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 font-body">
+        <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 px-4 font-body">
           Secure your spot and be part of InfinityX Hackathon. 
           Join 200+ developers, innovators, and dreamers building the future.
         </p>

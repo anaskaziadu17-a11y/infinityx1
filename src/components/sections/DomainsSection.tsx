@@ -56,28 +56,28 @@ const DomainsSection = () => {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 relative z-10">
         {domains.map((domain, index) => (
           <motion.div
             key={domain.title}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className={`glass-card card-hover-lift p-6 group cursor-pointer ${
-              index === 4 ? "md:col-span-2 lg:col-span-1" : ""
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            className={`glass-card card-hover-lift p-5 md:p-6 group cursor-pointer ${
+              index === 4 ? "sm:col-span-2 lg:col-span-1" : ""
             }`}
           >
-            <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${domain.gradient} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-              <domain.icon className="w-6 h-6 text-foreground" />
+            <div className={`inline-flex p-2.5 md:p-3 rounded-xl bg-gradient-to-br ${domain.gradient} mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300`}>
+              <domain.icon className="w-5 h-5 md:w-6 md:h-6 text-foreground" />
             </div>
-            <h3 className="text-xl font-bold font-display mb-2 text-foreground group-hover:text-primary transition-colors">
+            <h3 className="text-lg md:text-xl font-bold font-display mb-2 text-foreground group-hover:text-primary transition-colors">
               {domain.title}
             </h3>
-            <p className="text-muted-foreground text-sm font-body leading-relaxed mb-4">
+            <p className="text-muted-foreground text-sm font-body leading-relaxed mb-3 md:mb-4">
               {domain.description}
             </p>
-            <button className="text-primary text-sm font-semibold hover:text-accent transition-colors flex items-center gap-1">
+            <button className="text-primary text-sm font-semibold hover:text-accent transition-colors flex items-center gap-1 touch-manipulation py-1">
               View Problem Statement
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>

@@ -181,12 +181,12 @@
 
   /* Section Container */
   .section-container {
-    @apply container mx-auto px-4 py-20 md:py-32;
+    @apply container mx-auto px-4 sm:px-6 py-16 md:py-24 lg:py-32;
   }
 
   /* Section Title */
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 leading-tight;
     font-family: 'Orbitron', sans-serif;
   }
 
