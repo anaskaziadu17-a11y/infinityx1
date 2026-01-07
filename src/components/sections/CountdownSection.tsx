@@ -65,7 +65,7 @@ const CountdownSection = () => {
           Don't miss the opportunity to be part of something extraordinary
         </p>
 
-        <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8 max-w-3xl mx-auto">
           {timeUnits.map((unit, index) => (
             <motion.div
               key={unit.label}
@@ -73,18 +73,18 @@ const CountdownSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-card p-6 md:p-8 min-w-[100px] md:min-w-[140px] text-center glow-combined"
+              className="glass-card p-4 sm:p-5 md:p-6 lg:p-8 text-center glow-combined"
             >
               <motion.span
                 key={unit.value}
                 initial={{ scale: 1.2, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3 }}
-                className="block text-4xl md:text-6xl font-bold font-display gradient-text"
+                className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display gradient-text"
               >
                 {unit.value.toString().padStart(2, "0")}
               </motion.span>
-              <span className="text-muted-foreground text-sm md:text-base uppercase tracking-wider mt-2 block font-body">
+              <span className="text-muted-foreground text-xs sm:text-sm md:text-base uppercase tracking-wider mt-1 md:mt-2 block font-body">
                 {unit.label}
               </span>
             </motion.div>

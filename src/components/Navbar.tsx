@@ -47,12 +47,12 @@ const Navbar = () => {
             {/* Logo */}
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex items-center gap-2"
+              className="flex items-center gap-1 min-w-0"
             >
-              <div className="scale-50 -ml-6">
+              <div className="scale-[0.4] -ml-5 -mr-3 flex-shrink-0">
                 <InfinitySymbol />
               </div>
-              <span className="font-display font-bold text-lg gradient-text">
+              <span className="font-display font-bold text-base sm:text-lg gradient-text truncate">
                 InfinityX
               </span>
             </button>

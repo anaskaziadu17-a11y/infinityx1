@@ -38,23 +38,23 @@ const HighlightsSection = () => {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
         {highlights.map((item, index) => (
           <motion.div
             key={item.title}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="glass-card card-hover-lift neon-border p-8 text-center group cursor-pointer"
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            className="glass-card card-hover-lift neon-border p-6 md:p-8 text-center group cursor-pointer"
           >
-            <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${item.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-              <item.icon className="w-8 h-8 text-foreground" />
+            <div className={`inline-flex p-3 md:p-4 rounded-2xl bg-gradient-to-br ${item.gradient} mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <item.icon className="w-6 h-6 md:w-8 md:h-8 text-foreground" />
             </div>
-            <h3 className="text-2xl font-bold font-display mb-3 text-foreground">
+            <h3 className="text-xl md:text-2xl font-bold font-display mb-2 md:mb-3 text-foreground">
               {item.title}
             </h3>
-            <p className="text-muted-foreground font-body">
+            <p className="text-sm md:text-base text-muted-foreground font-body">
               {item.description}
             </p>
           </motion.div>

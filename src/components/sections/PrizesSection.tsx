@@ -60,7 +60,7 @@ const PrizesSection = () => {
       </motion.div>
 
       {/* Main Prizes */}
-      <div className="flex flex-col md:flex-row items-end justify-center gap-6 mb-16 relative z-10">
+      <div className="flex flex-col md:flex-row items-stretch md:items-end justify-center gap-4 md:gap-6 mb-12 md:mb-16 relative z-10 px-4">
         {mainPrizes.map((prize, index) => (
           <motion.div
             key={prize.position}
@@ -68,17 +68,17 @@ const PrizesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
-            className={`glass-card p-8 text-center ${prize.scale} ${
-              prize.featured ? "glow-combined" : ""
+            className={`glass-card p-6 md:p-8 text-center md:${prize.scale} ${
+              prize.featured ? "glow-combined order-first md:order-none" : ""
             } card-hover-lift w-full md:w-72`}
           >
-            <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${prize.gradient} mb-4`}>
-              <prize.icon className="w-10 h-10 text-background" />
+            <div className={`inline-flex p-3 md:p-4 rounded-2xl bg-gradient-to-br ${prize.gradient} mb-3 md:mb-4`}>
+              <prize.icon className="w-8 h-8 md:w-10 md:h-10 text-background" />
             </div>
-            <div className="text-sm font-medium text-muted-foreground mb-1">
+            <div className="text-xs md:text-sm font-medium text-muted-foreground mb-1">
               {prize.position} Prize
             </div>
-            <div className="text-4xl font-bold font-display gradient-text mb-4">
+            <div className="text-3xl md:text-4xl font-bold font-display gradient-text mb-3 md:mb-4">
               {prize.prize}
             </div>
             <ul className="space-y-2">

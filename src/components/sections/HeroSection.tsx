@@ -13,16 +13,16 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       <ParticleBackground />
       
-      {/* Gradient Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/20 rounded-full blur-[100px] animate-float" style={{ animationDelay: "-3s" }} />
+      {/* Gradient Orbs - Hidden on mobile to prevent overflow */}
+      <div className="hidden sm:block absolute top-1/4 left-1/4 w-48 md:w-72 lg:w-96 h-48 md:h-72 lg:h-96 bg-primary/20 rounded-full blur-[80px] md:blur-[120px] animate-float" />
+      <div className="hidden sm:block absolute bottom-1/4 right-1/4 w-40 md:w-60 lg:w-80 h-40 md:h-60 lg:h-80 bg-accent/20 rounded-full blur-[60px] md:blur-[100px] animate-float" style={{ animationDelay: "-3s" }} />
 
-      <div className="container mx-auto px-4 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 text-center relative z-10 pt-16 md:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-6"
+          className="mb-4 md:mb-6"
         >
           <InfinitySymbol />
         </motion.div>
@@ -31,7 +31,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold font-display mb-6 animate-float"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-display mb-4 md:mb-6 animate-float leading-tight"
         >
           <span className="gradient-text">InfinityX</span>
           <br />
@@ -42,7 +42,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 font-body leading-relaxed"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 px-2 font-body leading-relaxed"
         >
           Join us for an innovative <span className="text-primary font-semibold">30-hour offline hackathon</span> where creativity meets technology.
           Build groundbreaking solutions, collaborate with top minds, and compete for exciting prizes.

@@ -18,22 +18,25 @@ const FooterSection = () => {
 
   return (
     <footer className="border-t border-border bg-card/50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+      <div className="container mx-auto px-4 sm:px-6 py-12 md:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="sm:col-span-2 md:col-span-1"
           >
             <div className="flex items-center gap-3 mb-4">
-              <InfinitySymbol />
+              <div className="scale-75 -ml-3">
+                <InfinitySymbol />
+              </div>
             </div>
-            <h3 className="text-2xl font-bold font-display gradient-text mb-2">
+            <h3 className="text-xl md:text-2xl font-bold font-display gradient-text mb-2">
               InfinityX Hackathon
             </h3>
-            <p className="text-muted-foreground font-body">
+            <p className="text-muted-foreground font-body text-sm md:text-base">
               Code Beyond Limits
             </p>
           </motion.div>

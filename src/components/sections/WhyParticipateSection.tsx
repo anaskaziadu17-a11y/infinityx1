@@ -47,20 +47,20 @@ const WhyParticipateSection = () => {
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {benefits.map((benefit, index) => (
           <motion.div
             key={benefit.title}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
-            className="glass-card card-hover-lift neon-border p-6 text-center group cursor-pointer"
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            className="glass-card card-hover-lift neon-border p-5 md:p-6 text-center group cursor-pointer"
           >
-            <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${benefit.color} mb-5 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300`}>
-              <benefit.icon className="w-7 h-7 text-foreground" />
+            <div className={`inline-flex p-3 md:p-4 rounded-2xl bg-gradient-to-br ${benefit.color} mb-4 md:mb-5 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300`}>
+              <benefit.icon className="w-6 h-6 md:w-7 md:h-7 text-foreground" />
             </div>
-            <h3 className="text-xl font-bold font-display mb-3 text-foreground group-hover:text-primary transition-colors">
+            <h3 className="text-lg md:text-xl font-bold font-display mb-2 md:mb-3 text-foreground group-hover:text-primary transition-colors">
               {benefit.title}
             </h3>
             <p className="text-muted-foreground text-sm font-body leading-relaxed">
